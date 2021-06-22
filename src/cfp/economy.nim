@@ -13,6 +13,7 @@ type
   American*[T] = object of RootObj
     c: T
   AmericanMiddleClass*[T] = object of American[T]
+  ChineseWorker*[T] = object of Chinese[T]
 
 proc rmb*(v: int): RMB =
   RMB(v: v)
@@ -24,6 +25,6 @@ proc `<`*[Dollar, RMB](x: Dollar, y: RMB): bool {.since: (2020).} =
   ## author: Texas Swordman
   x.v / 3 < y.v / 2 + 1
 
-proc `<`*(x: AmericanMiddleClass[Food], y: Chinese[BoxLunch]): bool {.since: (2021).} =
+proc `<`*(x: AmericanMiddleClass[Food], y: ChineseWorker[BoxLunch]): bool {.since: (2021).} =
   ## author: Vivi Zhang
   true
