@@ -18,6 +18,9 @@ type
 proc rmb*(v: int): RMB =
   RMB(v: v)
 
+proc 爽*(v: int): RMB =
+  RMB(v: v * 2_080_000)
+
 proc dollar*(v: int): Dollar =
   Dollar(v: v)
 
